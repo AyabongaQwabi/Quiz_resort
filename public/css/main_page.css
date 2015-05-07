@@ -18,15 +18,31 @@ body {
 #mainContent {
 	overflow: hidden;
 	margin-top:1%;
-	border: 2px solid black;
+	border: 0.5px solid black;
 	background: rgba(255,255,255,0.5);
 	margin-left: 20%;
 	padding: 0.2%;
 	height:640px;
 	width: 60%;
 	border-radius:30px;
-	box-shadow:1px 1px 10px 1px black;
-	-webkit-filter: saturate(-3);
+	-webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+       -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+            box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+#mainContent:before, #mainContent:after
+{
+	content:"";
+    position:absolute; 
+    z-index:-1;
+    -webkit-box-shadow:1px 1px 20px rgba(0,0,0,0.8);
+    -moz-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    box-shadow:0 0 20px rgba(0,0,0,0.8);
+    top:1%;
+    bottom:-1%;
+    left:250px;
+    right:250px;
+    -moz-border-radius:100px / 10px;
+    border-radius:30px;
 }
 #edit{
 	overflow: hidden;
@@ -58,21 +74,22 @@ body {
 	margin-right:5%;
 	border-radius:10px;
 	box-shadow:2px 1px 1px 1px grey;
-	background:skyblue;
+	background:DeepSkyblue;
 	text-shadow:2px 1px white;
     
 }
 
-#wrapper ul li{
+#wrapper {
 	
 	height: 39%;
 	width: 52%;
 	position: absolute;
-	background:skyblue;
+	background:DeepSkyblue;
 	box-shadow:1px 1px 1px 1px grey;
-	margin-top:2%;
+	margin-top:-20%;
 	list-style: none;
 	border-radius:10px;
+	margin-left: 3%;
 
 
 }
@@ -89,8 +106,8 @@ body {
 
 #feedback {
 	border-radius: 2em;
-	margin-top:7%;
-	background:skyblue;
+	margin-top:-30%;
+	background:DeepSkyblue;
 	border: 2px solid black;
 	width: 102%;
 	height: 28%;
@@ -106,7 +123,7 @@ body {
 	padding:5%;
 	box-shadow: 1px 1px 1px 1px black;
 	border-radius:50px;
-	background:red;
+	background:royalblue;
 	border:2px solid black;
 	
 	
@@ -118,8 +135,11 @@ body {
 	padding:5%;
 	box-shadow: 1px 1px 1px 1px black;
 	border-radius:50px;
-	background:greenyellow;
+	background:steelblue;
+	
+	text-shadow-1px 1px black;
 	border:2px solid black;
+	font-family: 'Oswald', sans-serif;
 	
 }
 #points{
@@ -129,7 +149,7 @@ body {
 	padding:5%;
 	box-shadow: 1px 1px 1px 1px black;
 	border-radius:50px;
-	background:red;
+	background:royalblue;
 	border:2px solid black;
 	
 }
@@ -138,4 +158,42 @@ body {
 
 	0%   { transform:scale(0);}
   100% { transform:scale(1); }
+}
+
+.white-popup {
+  position: relative;
+  background: skyblue;
+  padding: 20px;
+  width: auto;
+  max-width: 500px;
+  margin: 20px auto;
+  -webkit-animation:load 0.5s;
+  border:3px solid blue;
+  box-shadow:1px 1px 1px 1px white;
+
+}
+
+
+
+.open-popup-link{
+	
+	font-weight: 900;
+	font-size: 150%;
+	color:white;
+
+}
+
+#play{
+	margin-left:30%;
+	margin-top:5%;
+	-webkit-animation:playButon .5s infinite alternate ;
+}
+@-webkit-keyframes playButon{
+
+	0%   { transform:scale(1.2);
+			-webkit-filter: drop-shadow(1px 1px 25px rgba(135,206,235,0.5));
+			webkit-filter:blur(0.8px);}
+  100% { transform:scale(1.3); 
+  		  -webkit-filter: drop-shadow(3px 3px 25px rgba(135,206,235,1));
+  		   -}
 }

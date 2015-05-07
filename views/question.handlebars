@@ -1,11 +1,17 @@
+ <script type='text/javascript'>
+           document.getElementById('play').style.visibility='hidden';
+
+         </script>
+
  <div id="story" class=".col-md-6">
     <p>{{question.quest}}</p>
  </div>
 
- <div id="" class=".col-md-4"> 
+ <div id="story" class=".col-md-4"> 
     <ul>
         {{#each question.options}}
             <li >{{this}}</li>
         {{/each}}
     </ul>
  </div>
+  
