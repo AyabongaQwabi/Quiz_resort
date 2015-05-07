@@ -1,0 +1,141 @@
+.bars {
+
+}
+
+#navbar {}
+
+#openright {float: right;}
+
+#openleft {float: left;}
+
+
+body {
+	background:url('../images/back.jpg');
+	background-size: cover;
+	-webkit-animation:load 0.5s;
+	}
+
+#mainContent {
+	overflow: hidden;
+	margin-top:1%;
+	border: 2px solid black;
+	background: rgba(255,255,255,0.5);
+	margin-left: 20%;
+	padding: 0.2%;
+	height:640px;
+	width: 60%;
+	border-radius:30px;
+	box-shadow:1px 1px 10px 1px black;
+	-webkit-filter: saturate(-3);
+}
+#edit{
+	overflow: hidden;
+	margin-top:0%;
+
+	background: rgba(255,255,255,0.9);
+	margin-left: 2%;
+	padding: 0.1%;
+	height:640px;
+	width: 55%;
+	z-index: -1;
+	border-radius:30px;
+	/*box-shadow:1px 1px 1px 1px black;*/
+	position:absolute;
+}
+#story {
+	width: 88%;
+	height: 25%;
+	border: 0.5px solid black;
+	padding-left:5%;
+	padding-right:5%;
+	padding-top: 1%;
+	text-align:center;
+	font-family: 'Merriweather Sans', sans-serif;
+	font-weight: 900;
+	font-size: 2vw;
+	margin-left:5%;
+	margin-top:3%;
+	margin-right:5%;
+	border-radius:10px;
+	box-shadow:2px 1px 1px 1px grey;
+	background:skyblue;
+	text-shadow:2px 1px white;
+    
+}
+
+#wrapper ul li{
+	
+	height: 39%;
+	width: 52%;
+	position: absolute;
+	background:skyblue;
+	box-shadow:1px 1px 1px 1px grey;
+	margin-top:2%;
+	list-style: none;
+	border-radius:10px;
+
+
+}
+
+#progress {
+	border: 1px solid black;
+	width: 80%;
+	height: 2%;
+	background:yellow;
+	margin-top:32%;
+	margin-left:10%;
+
+}
+
+#feedback {
+	border-radius: 2em;
+	margin-top:7%;
+	background:skyblue;
+	border: 2px solid black;
+	width: 102%;
+	height: 28%;
+	margin-left: -1%;
+	opacity: 1.2;
+	overflow:hidden;
+
+}
+#level{
+	width:20%;
+	height:30%;
+	margin-left:1%;
+	padding:5%;
+	box-shadow: 1px 1px 1px 1px black;
+	border-radius:50px;
+	background:red;
+	border:2px solid black;
+	
+	
+}
+#hint{
+	width:20%;
+	height:30%;
+	margin-left: 10%;
+	padding:5%;
+	box-shadow: 1px 1px 1px 1px black;
+	border-radius:50px;
+	background:greenyellow;
+	border:2px solid black;
+	
+}
+#points{
+	width:20%;
+	height:30%;
+	margin-left: 10%;
+	padding:5%;
+	box-shadow: 1px 1px 1px 1px black;
+	border-radius:50px;
+	background:red;
+	border:2px solid black;
+	
+}
+
+@-webkit-keyframes load{
+
+	0%   { transform:scale(0);}
+  100% { transform:scale(1); }
+}
