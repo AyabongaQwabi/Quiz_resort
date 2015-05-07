@@ -13,13 +13,54 @@
 	<link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:400,800,800italic' rel='stylesheet' type='text/css'>
 	<script type='text/javascript' src="static/js/jquery.text3d.js"></script>		
 	<link href='http://fonts.googleapis.com/css?family=Oswald:400,700' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Alegreya+Sans:400,700,800,900,800italic,900italic,700italic,500italic' rel='stylesheet' type='text/css'>
+
+	<!-- I just added this now -->
+	<script src="/js/typed.js"></script>
+	<script>
+		setTimeout(function(){
+			$(function(){
+			$(".element1").typed({
+        		strings: ["Mother City"],
+        		typeSpeed: 5,
+        		showCursor:false
+     		 });
+  		});
+     		 
+		},1000)
+
+		setTimeout(function(){
+			$(function(){
+			$(".element2").typed({
+        		strings: ["Resorts"],
+        		typeSpeed: 5,
+        		showCursor:false
+     		 });
+  		});
+     		 
+		},2000)
+	
+ 		 
+	</script>
+
+
+
+
+
+
 </head>
+
 <body>
 
+	<div class="element1"></div>
+	<div class="element2"></div>
     	<div id="mainContent" class=".col-md-6">
     	   <!-- <div id='edit' class=".col-md-6"></div> -->
-    	    <div id="userhint" class="white-popup mfp-hide"><h2> Hint <h/2>
-    	       <h4> You have <span id='hintCount'>[0]</span> left </h4>
+    	    <div id="userhint" class="white-popup mfp-hide">
+
+    	    	<h2> Hint <h/2>
+    	        <h4> You have <span id='hintCount'>[0]</span> left </h4>
+
             </div>
     	  {{{body}}}
     	 </div>
