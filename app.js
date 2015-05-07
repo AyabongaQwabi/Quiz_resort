@@ -12,8 +12,10 @@ app.get("/", function(req, res){
 	res.render("home")
 })
 
-app.get("/*", function(req, res){
-	res.render("home")
+
+
+app.get("/play", function(req, res){
+	res.render("play")
 })
 
 var server = app.listen(3000, function(){

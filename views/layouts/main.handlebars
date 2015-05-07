@@ -4,53 +4,76 @@
 	<title>Nelisa Spaza</title>
 	<link rel="stylesheet" type="text/css" href="static/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="static/css/main_page.css">
-	<script type='text/javascript' src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script type='text/javascript' src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>	
+	<script type="text/javascript" src="static/js/questionaire.js"></script>
+	<link rel="stylesheet" href="static/css/magnific-popup.css"> 
+		<!-- jQuery 1.7.2+ or Zepto.js 1.0+ -->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> 
+		<!-- Magnific Popup core JS file -->
+	<script src="static/js/magnific-popup.js" >  </script>
 	<link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:400,800,800italic' rel='stylesheet' type='text/css'>
+	<script type='text/javascript' src="static/js/jquery.text3d.js"></script>		
+	<link href='http://fonts.googleapis.com/css?family=Oswald:400,700' rel='stylesheet' type='text/css'>
 </head>
 <body>
 
-	<span id="name">
-
-    	<span id="logo">
-
     	<div id="mainContent" class=".col-md-6">
     	<!-- <div id='edit' class=".col-md-6"></div> -->
-    	 
+    	 <div id="userhint" class="white-popup mfp-hide"><h2> Hint <h/2>
+    	 		<h4> You have <span id='hintCount'>[0]</span> left </h4></div>
+		 
+
+
     	 <div id="story" class=".col-md-6">
-    	     	 	<p>Give the name of a resort that you can find on your way to Cape Point from Simon's Town ?</p>
+    	     	 	<p>Cape Town resorts Quiz</p>
+                    <small><small>get to know your city</small></small>
 
     	 </div>
-
-    	 <div id="wrapper" class=".col-md-4"> 
-    	  <ul>
-
-    	   <li class="Question">{{Question1Map}}</li>
-    	   <li class="Question">{{Question2Map}}</li>
-    	   <li class="Question">{{Question3Map}}</li>
-    	   <li class="Question">{{Question4Map}}</li>
-    	   <li class="Question">{{Question5Map}}</li>
-
-    	  </ul>
-
+    	 <a href='./play' ><img id= 'play' src='static/images/play.png' ></a>
+    	 
+    	  {{{body}}}
     	 </div>
 
-    	 <div id="progress">
-    	 </div>
-    	 <div id="feedback" class='btn btn-lg btn-primary'> 
-    	   <span id="level"class='btn btn-lg btn-primary' >LEVEL 1</span>
-    	   <span id="hint" class="btn btn-lg btn-primary">GET HINT</span>
-    	   <span id="points" class="btn btn-lg btn-primary"> 0 POINTS</span>
-    	   
-    	 </div>
+<script type="text/javascript">
+			$('.open-popup-link').magnificPopup({
+  				type:'inline',
+ 				 midClick: true 
+				});
 
-    	</div>
-
-
-
-
-
-
-
+			$("#city").text3d({
+				depth: 6,
+				angle: 135,
+				color: "#aaa",
+				lighten: -0.1,
+				shadowDepth: 30,
+				shadowAngle: 45,
+				shadowOpacity: 0.2
+			});
+			$('#city').mouseenter(function(){
+				
+				$("#city").text3d({
+				depth: 6,
+				angle: 235,
+				color: "#000",
+				lighten: -0.1,
+				shadowDepth: 80,
+				shadowAngle: 45,
+				shadowOpacity: 0.2
+			});
+			})
+			$('#city').mouseleave(function(){
+				
+				$("#city").text3d({
+				depth: 6,
+				angle: 135,
+				color: "#aaa",
+				lighten: -0.1,
+				shadowDepth: 80,
+				shadowAngle: 45,
+				shadowOpacity: 0.2
+			});
+			})</script>
 
 
 </body>
