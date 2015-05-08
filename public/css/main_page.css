@@ -107,10 +107,11 @@ body {
 
 }
 #level{
-	width:20%;
+	width:30%;
 	height:30%;
 	margin-left:1%;
 	padding:5%;
+	text-align: center;
 	box-shadow: 1px 1px 1px 1px black;
 	border-radius:50px;
 	background:royalblue;

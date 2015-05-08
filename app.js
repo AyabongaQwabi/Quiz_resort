@@ -16,31 +16,36 @@ var questions = {
 		question_id : 1,	
       quest:"Give the name of a resort that you can find on your way to Cape Point from Simon's Town?",
       options: ["Silwerstroomstrand", "Kuilsriver", "Miler's Point Resort." ,"Hendon Park"],
-      answer : "Miler's Point Resort."
+      answer : "Miler's Point Resort.",
+      hint: "When at this Resort, you can visit Cape Point, Kalk Bay and other tourism destination in the Southern part of the Peninsula."
 	},
 	2 : {
 		question_id : 2, 
 	  quest:"Name the resort that falls on the West Coast Biosphere Reserve and Koeberg Power Station.",
       options: ["Silwerstroomstrand Resort", "Kuilsriver", "Miler's Point Resort." ,"Hendon Park"],
-      answer : "Silwerstroomstrand Resort"
+      answer : "Silwerstroomstrand Resort",
+      hint: "This Resort is in the West Coast and is perfect for long walk on the unspoilt coastline, getting a tan and for swimming."
 	},
 	3 : {
 		question_id : 3,
 	  quest:"This resort is next to Muizenberg Beach and in summer it's sheltered from the Cape's famous South-Easter winds.",
       options: ["Silwerstroomstrand", "Zandvlei Resort.", "Miler's Point Resort." ,"Hendon Park"],
-      answer : "Zandvlei Resort."
+      answer : "Zandvlei Resort.",
+      hint: "This resort offers caravan Park visitors, a variety of water sports such as sailing, wind surfing and canoeing."
 	},
 	4 : {
 		question_id : 4,
 	  quest:" A Xhosa name for one of the resorts means: 'bringing joy', which is it?.",
       options: ["Morapedi Resort", "Khayelitsha Resort", "Miler's Point Resort." ," Monwabisi Resort."],
-      answer : " Monwabisi Resort."
+      answer : " Monwabisi Resort.",
+      hint: "This Resort is next to Khayelitsha Township, it has picnic and braai sites, chalets and camping located along the Bade Powell Drive."
 	},
 	5 : {
 		question_id : 5,
 	  quest:"If you wish to watch some Whales by the Bay, you would visit this Resort.",
       options: ["Silwerstroomstrand", "Kuilsriver", "Miler's Point Resort." ,"Kogel Bay"],
-      answer : "Kogel Bay"
+      answer : "Kogel Bay",
+      hint: "This is located between Gorden's Bay and Rooi ELS, and is perfect for swimming and camping as the high mountains shelter it from the winds during summer."
 	}
 };
 
@@ -70,6 +75,7 @@ app.get('/question/:question_id', function(req, res){
 
 	// get the question in the map
 	var question = questions[question_id];
+	console.log(question);
 	//show the question
 	res.render('question', {
 			question : question,
