@@ -22,7 +22,7 @@ var questions = {
 		question_id : 2, 
 	  quest:"Name the resort that falls on the West Coast Biosphere Reserve and Koeberg Power Station.",
       options: ["Silwerstroomstrand Resort", "Kuilsriver", "Miler's Point Resort." ,"Hendon Park"],
-      answer : "Silwerstroomstrand Resort."
+      answer : "Silwerstroomstrand Resort"
 	},
 	3 : {
 		question_id : 3,
@@ -40,7 +40,7 @@ var questions = {
 		question_id : 5,
 	  quest:"If you wish to watch some Whales by the Bay, you would visit this Resort.",
       options: ["Silwerstroomstrand", "Kuilsriver", "Miler's Point Resort." ,"Kogel Bay"],
-      answer : " Kogel Bay"
+      answer : "Kogel Bay"
 	}
 };
 
@@ -53,6 +53,7 @@ app.set("view engine", "handlebars")
 app.use(express.static(__dirname + '/public'));
 
 app.get("/", function(req, res){
+	points = 0;
 	res.render("home")
 });
 
@@ -86,7 +87,6 @@ app.post('/question/:question_id', function(req, res){
 	var answer = req.body.answer;
 
 	if (currentQuestion.answer ===  answer){
-		console.log("correct!")
 		points++;
 	}
 
@@ -95,10 +95,12 @@ app.post('/question/:question_id', function(req, res){
 
 	//if I found no questions we are done!!!
 	if(question === undefined){
-		res.render('done');
+		console.log('done...!');
+		return res.render('done', {points : points});
 	}
 
 	//show the question,
+
 	res.render('question', {question : question, 
 							points : points})
 	
