@@ -12,12 +12,31 @@
  <div id="story" class=".col-md-4"> 
     <form action="/question/{{question.question_id}}" method="post">
         {{#each question.options}}
-            <div class="radio">
-                <label>
-                <input type="radio" name="answer" value="{{this}}">{{this}}</label>
-            </div>
+            
+       
+        <div class="col-sm-12">
+        <div class="radio">
+          <label>
+            <input type="radio" name="answer" value="{{this}}">                    
+            <span class="cr"><i class="cr-icon fa fa-circle"></i></span>
+                {{this}}
+          </label>
+        </div>
+      </div>
+
+
+
+            
+
+
+              
+
+              
+
+          
+                        
         {{/each}}
-        <input type="submit">
+        <input type="submit" id='submitButton'>
     </form>
  </div>
 

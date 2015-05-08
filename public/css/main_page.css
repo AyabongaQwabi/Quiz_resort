@@ -96,7 +96,7 @@ body {
 
 #feedback {
 	border-radius: 2em;
-	margin-top:13%;
+	margin-top:10%;
 	background:DeepSkyblue;
 	border: 2px solid black;
 	width: 102%;
@@ -110,12 +110,15 @@ body {
 	width:30%;
 	height:30%;
 	margin-left:1%;
-	padding:5%;
+	padding:5.5%;
 	text-align: center;
 	box-shadow: 1px 1px 1px 1px black;
 	border-radius:50px;
-	background:royalblue;
-	border:2px solid black;
+	background:url('../images/fun.jpg');
+	background-size: cover;
+	border:3px solid black;
+	text-shadow:2px 2px black;
+	font-size: 2vw;
 	
 	
 }
@@ -216,3 +219,84 @@ font-family: 'Alegreya Sans', sans-serif;
 		text-shadow:2px 2px black;
 }
 
+
+
+
+
+
+
+/*-------------------------------RADIO BUTTONS --------------------------------------------------------*/
+
+
+
+
+.checkbox label:after, 
+.radio label:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.checkbox .cr,
+.radio .cr {
+    position: relative;
+    display: inline-block;
+    border: 4px solid YELLOW;
+    -webkit-filter:dropshadow(50px red);
+    border-radius: .25em;
+    width: 1.3em;
+    height: 1.3em;
+    float: left;
+    margin-right: .5em;
+
+}
+.radio label{
+	display: block;
+	text-align: left;
+}
+.radio .cr {
+    border-radius: 50%;
+
+}
+#submitButton{
+	border-radius:1em;
+	background:yellow;
+	margin-top:-10%;
+	border:2px solid tomato;
+	padding:1%;
+}
+.checkbox .cr .cr-icon,
+.radio .cr .cr-icon {
+    position: absolute;
+    font-size: .8em;
+    line-height: 0;
+    top: 50%;
+    left: 20%;
+}
+
+.radio .cr .cr-icon {
+    margin-left: 0.04em;
+}
+
+.checkbox label input[type="checkbox"],
+.radio label input[type="radio"] {
+    display: none;
+}
+
+.checkbox label input[type="checkbox"] + .cr > .cr-icon,
+.radio label input[type="radio"] + .cr > .cr-icon {
+    transform: scale(3) rotateZ(-20deg);
+    opacity: 0;
+    transition: all .3s ease-in;
+}
+
+.checkbox label input[type="checkbox"]:checked + .cr > .cr-icon,
+.radio label input[type="radio"]:checked + .cr > .cr-icon {
+    transform: scale(1) rotateZ(0deg);
+    opacity: 1;
+}
+
+.checkbox label input[type="checkbox"]:disabled + .cr,
+.radio label input[type="radio"]:disabled + .cr {
+    opacity: .5;
+}
