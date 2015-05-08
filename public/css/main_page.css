@@ -28,7 +28,7 @@ body {
     -moz-box-shadow:0 0 20px rgba(0,0,0,0.8);
     box-shadow:0 0 20px rgba(0,0,0,0.8);
     top:1%;
-    bottom:-1%;
+    bottom:-10%;
     left:250px;
     right:250px;
     -moz-border-radius:100px / 10px;
@@ -68,6 +68,7 @@ body {
 	text-shadow:2px 1px white;
     
 }
+.chec
 
 #wrapper {
 	
@@ -96,7 +97,7 @@ body {
 
 #feedback {
 	border-radius: 2em;
-	margin-top:10%;
+	margin-top:5%;
 	background:DeepSkyblue;
 	border: 2px solid black;
 	width: 102%;
