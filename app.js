@@ -129,9 +129,7 @@ app.get("/resortLists", function(req, res){
 	//
 	//show a view
 //}); 
-
-var server = app.listen(3000, function(){
-
+var port = process.env.PORT || 3000;
+var server = app.listen(port, function(){
 	console.log("server is running on " + server.address().address + ":" +server.address().port)
-
 })
