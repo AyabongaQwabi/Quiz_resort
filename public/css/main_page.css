@@ -12,7 +12,7 @@ body {
 	background: rgba(255,255,255,0.5);
 	margin-left: 20%;
 	padding: 0.2%;
-	height:640px;
+	height:95h;
 	width: 60%;
 	border-radius:30px;
 	-webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
@@ -178,6 +178,7 @@ body {
 	margin-left:30%;
 	margin-top:5%;
 	opacity:1;
+	width:20vw;
 	-webkit-transition:opacity 3s ease-in-out;
 	-webkit-animation:playButon .5s infinite alternate ;
 }
@@ -214,4 +215,3 @@ font-family: 'Alegreya Sans', sans-serif;
 		margin-left:61%;
 		text-shadow:2px 2px black;
 }
-
